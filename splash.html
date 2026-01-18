@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome - Justine Bimeda</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        
+        :root {
+            --bg-warm: #FDFBF7;      /* Soft Cream */
+            --primary-navy: #2C3E50; /* Dark Blue */
+            --accent-peach: #FFDAB9; /* Peach */
+            --accent-blue: #D1E9F6;  /* Light Blue */
+            --text-main: #544E48;    /* Dark Grey */
+            --white: #FFFFFF;
+            --shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-warm); 
+            color: var(--text-main);
+            overflow: hidden; 
+        }
+
+        /* Full page table for perfect centering */
+        .splash-layout {
+            width: 100%;
+            height: 100%;
+            border-collapse: collapse;
+        }
+
+        /* The Center Card */
+        .splash-card {
+            background: var(--white);
+            padding: 60px 50px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08); /* Slightly stronger shadow for depth */
+            text-align: center;
+            max-width: 500px;
+            margin: 0 auto;
+            border-top: 5px solid var(--accent-peach); /* Your signature peach accent */
+            
+            /* Animation */
+            opacity: 0;
+            animation: cardFadeIn 1s ease-out forwards;
+        }
+
+        /* Typography */
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.8rem;
+            color: var(--primary-navy);
+            margin: 0 0 10px 0;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            color: #8E8881; /* Matches your subtitle color */
+            font-weight: 300;
+            margin-bottom: 30px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        /* Decorative Line */
+        .divider {
+            height: 2px;
+            width: 60px;
+            background-color: var(--accent-peach);
+            margin: 0 auto 30px auto;
+        }
+
+        /* The Button - Matches your .btn class */
+        .enter-btn {
+            display: inline-block;
+            padding: 15px 40px;
+            background-color: var(--primary-navy);
+            color: white;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(44, 62, 80, 0.2);
+            
+            /* Button Animation */
+            opacity: 0;
+            animation: btnSlideUp 0.8s ease-out forwards 0.5s; /* Delays button appearance */
+        }
+
+        .enter-btn:hover {
+            background-color: #34495e;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(44, 62, 80, 0.3);
+        }
+
+        /* Animations */
+        @keyframes cardFadeIn {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        @keyframes btnSlideUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+    </style>
+</head>
+<body>
+
+    <table class="splash-layout" border="0">
+        <tr align="center" valign="middle">
+            <td>
+                
+                <div class="splash-card">
+                    <h1>Justine Bimeda</h1>
+                    
+                    <div class="divider"></div>
+
+                    <h3>Personal Profile &<br>Family Portfolio</h3>
+                    
+                    <a href="index.html" class="enter-btn">
+                        ENTER SITE
+                    </a>
+                </div>
+
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>

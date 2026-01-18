@@ -1,0 +1,526 @@
+
+        :root {
+            --bg-warm: #FDFBF7; /* Soft Cream */
+            --primary-navy: #2C3E50;
+            --accent-peach: #FFDAB9;
+            --accent-blue: #D1E9F6;
+            --text-main: #544E48;
+            --white: #FFFFFF;
+            --shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-warm);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        /* NAVIGATION Bar */
+        nav {
+            background-color: var(--white);
+            padding: 1.5rem;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--primary-navy);
+            font-weight: 500;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #E6A176;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(180deg, #FFFFFF 0%, #FDFBF7 100%);
+        }
+
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            color: var(--primary-navy);
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: #8E8881;
+            font-weight: 300;
+        }
+
+
+        .container {
+            width: 90%;          /* Occupies 90% of the screen width */
+            max-width: 1400px;   /* OPTIONAL: Stops it from getting too stretched on giant TV screens */
+            margin: 0 auto;      /* Keeps it perfectly centered */
+            padding: 20px;
+    box-sizing: border-box;
+        }
+
+        .card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: var(--shadow);
+            margin-bottom: 30px;
+            transition: transform 0.3s ease;
+            border: 1px solid rgba(0,0,0,0.02);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .section-title {
+            color: var(--primary-navy);
+            border-bottom: 3px solid var(--accent-peach);
+            display: inline-block;
+            margin-bottom: 20px;
+            padding-bottom: 5px;
+        }
+
+
+        .profile-img {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            margin-top: 20px;
+            object-fit: cover;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            font-size: 0.8rem;
+            color: #AAA;
+        }
+
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--primary-navy);
+            color: white;
+            border-radius: 50px;
+            text-decoration: none;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #34495e;
+            box-shadow: 0 5px 15px rgba(44, 62, 80, 0.2);
+        }
+
+        .home-image
+        {
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            margin-top: 10px;
+            object-fit: cover;
+        }
+
+        .active {
+            font-weight: 700;
+            color: #E6A176;
+        }
+/* author Justine Bimeda */
+.author-img {
+    width: 350px;
+    height: 405px;
+    border-radius: 15px;
+    object-fit: cover;
+    box-shadow: var(--shadow);
+    border: 5px solid var(--white);
+}
+.main-layout-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: none;
+}
+
+.profile-table {
+    border-spacing: 0;
+}
+
+.profile-img-col {
+    padding-right: 30px;
+}
+
+.profile-text-col {
+    padding-left: 10px;
+}
+
+
+.info-box {
+    background-color: var(--accent-blue);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    color: var(--primary-navy);
+}
+
+.info-box p {
+    margin: 5px 0;
+}
+
+
+
+
+/*hobbies*/
+.hobby-table {
+    margin-bottom: 40px;
+    border-spacing: 0;
+}
+
+/* Image styling for hobbies */
+.hobby-img {
+    width: 100%;
+    max-width: 300px; /* Prevents image from getting too huge */
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    display: block;
+}
+
+/* Cell Spacing for visual breathing room */
+.hobby-img-cell {
+    padding: 10px;
+}
+
+.hobby-text-cell {
+    padding: 20px;
+    vertical-align: middle;
+}
+
+/* Small "Tags" for characteristics (Strategy, Patience, etc.) */
+.tag {
+    display: inline-block;
+    background-color: var(--accent-peach);
+    color: var(--primary-navy);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+/* Responsive: Stack the hobby tables on mobile */
+@media (max-width: 768px) {
+    .hobby-table td {
+        display: block;
+        width: 100% !important; /* Force full width */
+        text-align: center;
+    }
+
+    /* Fix order for the 2nd hobby so image is on top on mobile */
+    .hobby-table tr {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    /* Ensure image is always first visually on mobile */
+    .hobby-img-cell {
+        order: -1; 
+        margin-bottom: 20px;
+    }
+    
+    .hobby-img {
+        margin: 0 auto; /* Center image */
+    }
+}
+
+/* =========================================
+   NEW FAMILY PAGE SPECIFIC STYLES (TABLE VERSION)
+   ========================================= */
+.family-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 20px;
+}
+
+.family-card {
+    text-align: center;
+    position: relative;
+    padding-top: 50px;
+    border-top: 5px solid var(--accent-peach);
+    height: 100%; /* Makes cards equal height */
+    box-sizing: border-box;
+}
+
+.role-tag {
+    background-color: var(--primary-navy);
+    color: var(--white);
+    padding: 5px 20px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    position: absolute;
+    top: -15px; 
+    left: 50%;
+    transform: translateX(-50%); /* Centers the tag */
+    box-shadow: 0 4px 10px rgba(44, 62, 80, 0.2);
+    text-transform: uppercase;
+}
+
+.role-tag.sibling {
+    background-color: #E6A176; 
+}
+
+.role-tag.friend {
+    background-color: #03cafc; 
+}
+
+.role-tag.late {
+    background-color: #7134eb; 
+}
+.role-tag.trash {
+    background-color: #ADD8E6; 
+}
+
+.role-tag.cris {
+    background-color: #800080; 
+}
+
+.role-tag.ralph {
+    background-color: #f5e642; 
+}
+
+.family-name {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    color: var(--primary-navy);
+    margin: 10px 0;
+    font-weight: 700;
+}
+
+.family-desc {
+    font-size: 0.95rem;
+    color: var(--text-main);
+}
+
+.category-link {
+    text-decoration: none;
+    color: inherit; /* Keeps the text color from the card */
+    display: block; /* Makes the link fill the cell */
+    height: 100%;
+}
+
+/* 2. Animation when hovering over the card */
+.hover-animate {
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 2px solid transparent; /* Invisible border by default */
+}
+
+.hover-animate:hover {
+    transform: translateY(-10px); /* Moves up slightly */
+    border-color: var(--accent-peach); /* Adds a peach border */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* 3. "Tap to View" text styling */
+.click-instruction {
+    margin-top: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--primary-navy);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background-color: var(--accent-blue);
+    padding: 8px 20px;
+    border-radius: 20px;
+    display: inline-block;
+}
+
+/* 4. Special Someone Tag Color Override */
+/* (Optional: makes the tag red/pink specifically for special someone) */
+.role-tag.special {
+    background-color: #FF6B6B;
+}
+.family-img {
+    width: 350px;
+    height: 350px;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    border: 5px solid var(--white);
+    object-fit: cover;
+}
+
+.hobbies-img {
+    width: 400px;
+    height: 350px;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    border: 5px solid var(--white);
+    object-fit: cover;
+}
+/* =========================================
+   EVENTS / HIGHLIGHTS PAGE STYLES
+   Add this to the bottom of style.css
+   ========================================= */
+
+/* 1. Event Card Specifics */
+.event-card {
+    text-align: left; /* Aligns text to the left for better reading */
+    padding: 40px;
+    height: 100%;
+}
+
+/* 2. Gallery Container (Holds the 3 images) */
+.gallery-container {
+    display: flex;
+    justify-content: space-between; /* Spreads images out evenly */
+    gap: 15px; /* Space between images */
+    margin: 25px 0; /* Space above and below the images */
+}
+
+/* 3. The Images */
+.event-img {
+    width: 32%; /* Makes 3 images fit perfectly in one row */
+    height: 300px; /* Fixed height for uniformity */
+    object-fit: cover; /* Ensures image isn't stretched/distorted */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    border: 3px solid var(--white); /* White border frame */
+}
+
+/* Hover effect for images */
+.event-img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    border-color: var(--accent-peach);
+}
+
+/* 4. Description Text */
+.event-desc {
+    font-size: 1rem;
+    color: var(--text-main);
+    line-height: 1.8;
+    background-color: var(--bg-warm); /* Slight background box for text */
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 4px solid var(--primary-navy); /* Accent line on left */
+}
+
+
+/* =========================================
+   CONTACT PAGE STYLES
+   Add this to the bottom of style.css
+   ========================================= */
+
+/* 1. Image Styling */
+.contact-img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    border: 5px solid var(--white);
+    margin-bottom: 20px;
+}
+
+/* 2. Left Side Info Box */
+.contact-info-box {
+    text-align: center;
+    background-color: var(--accent-blue);
+    padding: 20px;
+    border-radius: 15px;
+    color: var(--primary-navy);
+}
+
+/* 3. Social Media Icons */
+.social-media-icons {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-media-icons a {
+    color: var(--primary-navy);
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+    background: var(--white);
+    width: 40px;
+    height: 40px;
+    display: flex; /* Centers the icon inside the circle */
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    text-decoration: none;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.social-media-icons a:hover {
+    color: var(--white);
+    background-color: var(--accent-peach); /* Peach hover effect */
+    transform: translateY(-3px);
+}
+
+/* 4. Form Styling */
+.contact-card {
+    padding: 40px;
+    background: var(--white);
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--primary-navy);
+}
+
+/* Style for Inputs and Textarea */
+.styled-form input, 
+.styled-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #EEE;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box; /* Ensures padding doesn't break layout */
+    background-color: #FAFAFA;
+}
+
+.styled-form input:focus, 
+.styled-form textarea:focus {
+    outline: none;
+    border-color: var(--accent-peach);
+    background-color: var(--white);
+}
+
+/* 5. Submit Button */
+.submit-btn {
+    width: 100%;
+    cursor: pointer;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border: none;
+    font-size: 1rem;
+}
