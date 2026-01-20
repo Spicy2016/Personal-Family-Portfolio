@@ -524,3 +524,18 @@
     border: none;
     font-size: 1rem;
 }
+
+.balsomo {
+        animation: roll 10s infinite linear;
+}
+
+@keyframe roll{
+        0%{
+        left:0;
+        transform: rotate(0deg);
+        }
+        100&{
+                left: calc(100%-50px);
+                transform: rotate(360deg);
+        }
+}
